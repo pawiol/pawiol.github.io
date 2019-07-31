@@ -1,42 +1,31 @@
 [
 	{
-		"slug": "cool-project",
-		"name": "Cool project 1",
-		"image": "placeholder.jpg",
-		"url": "https://www.google.com",
-		"date": "Jan 2014",
-		"tags": ["Angular JS","API"]
+		"name": "Web Stories",
+		"image": "web_stories_2.png",
+		"url": "../project/web_stories/",
+		"date": "May 2019",
+		"tags": ["Web Stories"]
 	},
 	{
-		"name": "Cool project 2",
-		"image": "placeholder.jpg",
+		"slug": "reproducibility-in-data-science",
+		"name": "Reproducibility",
+		"image": "reproductibility.png",
+		"url": "../project/reproducibility/",
+		"date": "Feb 2019",
+		"tags": ["skills", "Python"]
+	},
+	{
+		"name": "Find an apartment",
+		"image": "new_apartment.jpg",
 		"url": "#",
-		"date": "May 2014",
-		"tags": ["Python","Django"]
+		"date": "Feb 2019",
+		"tags": ["Python","Scraping"]
 	},
 	{
-		"name": "Cool project 3",
-		"image": "placeholder.jpg",
-		"url": "#",
-		"date": "June 2014",
-		"tags": ["HTML","JQuery","Django"]
-	},
-	{
-		"name": "Cool project 4",
-		"image": "placeholder.jpg",
-		"date": "Oct 2016",
-		"tags": ["Python","nodejs"]
-	},
-	{
-		"name": "Cool project 5",
-		"image": "placeholder.jpg",
-		"date": "Oct 2016",
-		"tags": ["Python","nodejs"]
-	},
-	{
-		"name": "Cool project 6",
-		"image": "placeholder.jpg",
-		"date": "Oct 2016",
-		"tags": ["Python","nodejs"]
+		"name": "Goverment data",
+		"image": "sejm_logo.png",
+		"url": "https://www.kaggle.com/paweladamczak/polish-politicians-speeches",
+		"date": "Feb 2019",
+		"tags": ["Scraping","NLP","Python"]
 	}
 ]
