@@ -15,4 +15,5 @@ email: the.adamczak[at]google.com
 
 -----------------------------------
 
-- Week 30/2019 - [link](http://127.0.0.1:4000/python/skills/2019/07/26/web-stories-30-2019.html)
+- Week 30/2019 - [link](https://pawiol.github.io/python/skills/2019/07/26/web-stories-30-2019.html)
+- Week 31/2019 - [link](https://pawiol.github.io/python/skills/2019/08/02/web-stories-31-2019.html)
