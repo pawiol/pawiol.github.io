@@ -1,0 +1,74 @@
+
+<div class="card-columns m-3 mt-5">
+
+  <div class="wow animated fadeIn" data-wow-delay=".15s">
+    <a href="https://www.buymeacoffee.com/pawiol" class="project card text-themed" target="_blank">
+
+      <img id="coffe-img" class="card-img-top" src="/img/coffe.png" alt="coffe" />
+      <div class="card-body">
+        <h5 id="{{ project_id }}-name" class="card-title">
+          Let's grab a coffee!
+        </h5>
+        <p id="{{ project_id }}-desc" class="card-text">If you like any of the projects, you can buy me a coffe :)</p>
+        <p id="{{ project_id }}-tools" class="card-text">
+        </p>
+      </div>
+    </a>
+  </div>
+
+  <!-- Remote Projects -->
+  {% for remote_project in page.remote_projects %}
+
+    {%- for repo in site.github.public_repositories -%}
+
+      {%- if remote_project == repo.name -%}
+
+        {%- assign project = repo -%}
+        {%- assign words = project.name | split: '-' -%}
+        
+        {%- capture titlecase -%}
+          {%- for word in words -%}
+            {{ word | capitalize | append: ' ' }}
+          {%- endfor -%}
+        {%- endcapture -%}
+
+        {%- assign project_type  = "remote" -%}
+        {%- assign project_id    = project.name -%}
+        {%- assign project_img   = false -%}
+        {%- assign project_name  = titlecase | strip -%}
+        {%- assign project_desc  = project.description -%}
+        {%- assign project_url   = project.html_url -%}
+        {%- assign project_tools = project.topics -%}
+        {%- assign external      = true -%}
+
+        {% include projects/project-card.html %}
+
+      {%- endif -%}
+
+    {%- endfor -%}
+
+  {% endfor %}
+
+  <!-- Local Projects -->
+  {% for project in site.projects %}
+
+    {%- assign project_type  = "local" -%}
+    {%- assign project_id    = project.name | slugify -%}
+    {%- assign project_img   = project.image -%}
+    {%- assign project_name  = project.name -%}
+    {%- assign project_desc  = project.description -%}
+    {%- assign project_tools = project.tools -%}
+
+    {%- if project.external_url -%}
+      {%- assign project_url = project.external_url -%}
+      {%- assign external    = true -%}
+    {%- else -%}
+      {%- assign project_url = project.url | relative_url -%}
+      {%- assign external    = false -%}
+    {%- endif -%}
+
+    {% include projects/project-card.html %}
+
+  {% endfor %}
+
+</div>
